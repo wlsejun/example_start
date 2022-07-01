@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+                animation-name : ball;
+                /* animation을 몇초동안 반복할건지 */
+                animation-duration: 2s;
+                /* ease-in : animation 처음에 천천히 시작하고 점점 빨라지게.. 여러가지 기능이 있음 */
+                animation-timing-function: ease-in;
+                /* animation을 몇번 반복할건지 */
+                animation-iteration-count: 3;
+               
+            }
+            /* @keyframes myanimation {
+                0% { left: 0px; }
+                25% { left: 100px }
+                50% { left: 200px; }
+                75% { left: 300px }
+                100% { left: 400px }
+            } */
+        
+            
+            @keyframes ball {
+                to { top : 50px; }
+                from { top : 300px; }
+            } 
+         
+        </style>
+    </head>
+
+    <body>
+        <div class="div1"><img src="week_1/이미지파일/비숑.jpeg"></div>
+
+    </body>
+</html>

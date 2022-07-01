@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+                animation-name : myanimation;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 6;
+            }
+            @keyframes myanimation {
+                0% { left: 0px; }
+                25% { left: 100px }
+                50% { left: 100px; top: 100px}
+                75% { left: 0px; top: 100px}
+                100% { left: 0px }
+            }
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        
+            @keyframes ball {
+                to { top : 50px; }
+                from { top : 300px; }
+            }
+            
+         
+        </style>
+    </head>
+
+    <body>
+        <div class="div1"><img src="week_1/이미지파일/비숑.jpeg"></div>
+
+    </body>
+</html>
