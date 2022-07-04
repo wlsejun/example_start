@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <tilte></tilte>
+
+        <script>
+    
+        </script>
+    </head>
+    <body>
+
+        <div id="div1" class="div1">
+            <p class="css1">값1 : 
+                <input type="text" id="value1">
+            </p>
+            <p class="css1">값2 : 
+                <input type="text" id="value2">
+            </p>
+            <p class="css1">연산자 : 
+                <input type="text" id="oper">
+            </p>
+            <p class="css1">결과 : 
+                <input type="text" id="sum">
+            </p>
+            <button type="button" value="계산하기" onclick="add();">계산하기</button>
+            <button type="button" value="초기화" onclick="reset();">초기화</button>
+        </div>
+
+        <script>
+            function add(){
+                var num1 = document.getElementById("value1").value;
+                var num2 = document.getElementById("value2").value;
+                var operator = document.getElementById("oper").value;
+                
+                document.getElementById("sum").value = calculate(num1, operator, num2);
+            }
+
+            function calculate(n1, operator, n2) {
+                let result = 0;
+                if(operator == '+') {
+                    result = Number(n1) + Number(n2);
+                }
+                else if(operator == '-') {
+                    result = Number(n1) - Number(n2);
+                }
+                else if(operator == '*') {
+                    result = Number(n1) * Number(n2);
+                }
+                if(operator == '/') {
+                    result = Number(n1) / Number(n2);
+                }
+                return String(result);
+            }
+
+            function reset() {
+                doument.getElementById("value1").value = ""; 
+                doument.getElementById("value2").value = ""; 
+                doument.getElementById("oper").value = ""; 
+            }
+        </script>
+    </body>
+</html>
