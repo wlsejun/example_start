@@ -8,12 +8,12 @@
         <script>
             function addNode(){
                 var p1 = document.createElement("p");
-                var div1 = document.getElementById("div1");
+                var div1 = document.getElementById("div1"); 
 
                 p1.innerText = "p태그입니다.";
-                p1.className = "text";
+                p1.className = "text"; //왜 여기서 classname을 설정해주는거지?
                 p1.style = "text-align:center;"
-                var img = document.createElement("img");
+                var img = document.createElement("img"); 
                 img.src = "week_1/이미지파일/비숑.jpeg";
                 img.width = 100;
                 div1.appendChild(img);
@@ -26,8 +26,8 @@
             }
             function removeNode(){
                 var div1 = document.getElementById("div1");
-                var child = document.getElementsByClassName("text");
-                child[0].remove();
+                var child = document.getElementsByClassName("text"); // p1이 사라지는데 왜 사진이 올라가지?
+                child[0].remove(); //0의 의미는 뭐지?
             }
         </script>
     </head>

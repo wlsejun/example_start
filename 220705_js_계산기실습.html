@@ -59,3 +59,67 @@
         </script>
     </body>
 </html>
+
+<!-- 레퍼런스 코드
+<html>
+    <head>
+        <script>
+            function cal() {
+                var num1 = document.getElementById("v1").value; //text 스트링 형태로 해놓았기 때문에 숫자로 형변환을 해줘야함.
+                var num2 = document.getElementById("v2").value;
+                var op = document.getElementById("op").value;
+
+                num1 = parseInt(num1); //형변환, 숫자로
+                num2 = parseInt(num2); 
+
+                var result = document.getElementById("res");
+
+                switch( op ) {
+                    case "+" :
+                        rusult.value = num1 + num2;
+                    break;
+                    case "-" :
+                        rusult.value = num1 - num2;
+                    break;
+                }
+            function reset() {
+                document.getElementById("v1").value = "";
+                document.getElementById("v2").value = "";
+                document.getElementById("op").value = "";
+                document.getElementById("res").value = "";
+
+                //
+                var inputs = document.querySelectorAll("input"); //한번에 인풋태그를 선택하는 메서드 querySelectorAll("input");
+                console.log(inputs);
+                for ( var i = 0; i < inputs.length; i++ ){
+                    var selected = inputs[i];
+                    console.log( selected );
+                    selected.value = "";
+                    // 위 세줄을 한줄로 나타내면 -> inputs[i].value = "";
+                }
+                console.log( input[0]);
+
+                }
+                }
+         </script>
+    </head>
+
+<body>
+
+    값1:
+    <input type="text" id ="v1"><br>
+    값2:
+    <input type="text" id ="v2"><br>
+    연산자:
+    <input type="text" id ="op"><br>
+    결과:
+    <input type="text" id = "res">
+    <br></br>
+    <button type = "button" onclick="cal();">계산하기</button>
+    <button type = "button" onclick="reset();">초기화</button>
+</body>
+
+</html>
+
+
+ -->

@@ -47,3 +47,92 @@
     </table>
     </body>
 </html>
+
+<!--레퍼런스 코드
+<html>
+    <head>
+        <script>
+            var cnt 
+
+            function writeNote(){
+                var name = document.getElementById("name").value;
+                var content = document.getElementById("content").value;
+
+                var table = document.getElementById("table");
+                var garo = document.createElment("tr");
+
+                var kan1 = document.createElment("td");
+
+                //첫번째 방식
+                kan1.innerText = cnt;
+                cnt = cnt +1;
+
+                //두번때 방식
+                kan1.innerText = document.querySelectorAll("#table > tr").length; //Id가 table인 바로아래 있는 자식요소 tr을 가져온다는 의미.
+                
+                var kan2 = document.createElement("td");
+                kan2.innerText = name;
+                var kan3 = document.createElement("td");
+                kan3.innerText = "content";
+                
+                var kan4 = document.createElement("td");
+
+                var date = new Date();
+                kan4.innerText = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.get
+                //getMonth() 는 배열안에서 몇번째인 인덱스로 가져와지기 때문에 +1을 해줘야함. 
+
+                garo.appendChild(kan1);
+                garo.appendChild(kan2);
+                garo.appendChild(kan3);
+                garo.appendChild(kan4);
+                table.appendChild(garo);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>방명록입니다.</p>
+            <div>
+                 <table class="tbl">
+                 <tr>
+                     <th>작성자</th>
+                     <td>
+                         <input type="text" id="name" style="width: 150px;">
+                     </td>
+                 </tr>
+                 <tr>
+                     <th>내용</th>
+                     <td>
+                         <input type="text" id="content" style="width: 560px;">
+                     </td>
+                 </tr>
+                 </table>
+                 <br>
+                 <button type="button" onclick="writeNote();">작성</button>
+                 <br><br>
+                 <table id="table" border="1" cellpadding="10" cellspacing="1">
+                     <tr>
+                         <th>번호</th>
+                         <th>작성자</th>
+                         <th>내용</th>
+                         <th>작성일</th>
+                     </tr>
+                     <tr>
+                        <th>번호</th>
+                        <th>작성자</th>
+                        <th>내용</th>
+                        <th>작성일</th>
+                    </tr>
+                    <tr>
+                        <th>번호</th>
+                        <th>작성자</th>
+                        <th>내용</th>
+                        <th>작성일</th>
+                    </tr>
+                 </table>
+            </div>
+         </div>
+    </body>
+</html>
+
+ -->
