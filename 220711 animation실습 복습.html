@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+                animation-name: myanimation;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 6;
+
+            }
+            @keyframes myanimation {
+                0% { left: 0px; top: 0px;}
+                25% { left: 100px; top: 0px; }
+                50% { left: 100px; top: 100px; }
+                75% { left: 0px; top: 100px }
+                100% { left: 0px; top : 0px }
+            }
+            #circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                background-color: red;
+            }
+        </style>
+    </head>
+
+    <body>    
+        <div id="circle"></div>
+    </body>
+</html>
