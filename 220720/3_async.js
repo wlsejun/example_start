@@ -1,3 +1,15 @@
+// function func() {
+//     return new Promise(function(resoleve, reject) {
+//         resoleve(1);
+//     });
+// }
+async function func(){
+    return 1;
+}
+
+func().then(function(result){console.log( result ); });
+
+//------------------------------------------------------------//
 function login(id, pw) {
     return new Promise( function ( resolve, reject ) {
         setTimeout( function() {
@@ -25,7 +37,9 @@ function getDetail(video) {
         });
     });
 }
-login( 'kim', '1234' )
+
+/* function exec(){
+    login( 'kim', '1234' )
     .then( function(user){
         console.log( 'user님 환영' );
         var videos = getVideo(user);
@@ -42,3 +56,15 @@ login( 'kim', '1234' )
     .then( function(title) {
         console.log( title );
     })
+} */
+
+async function exec() {
+    let user = await login('kim')
+    console.log( user + "님 환영합니다." );
+    let videos = getVideo(user);
+    console.log( videos );
+    let title = getDetail(videos[0]);
+    console.log( title );
+}
+
+exec();

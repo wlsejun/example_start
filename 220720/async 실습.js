@@ -22,15 +22,13 @@ function hell( message ) {
 })
 }
 
-call('kim')
-    .then( function(name){
-        console.log( name + "반가워" );
-        return back( name );
-    })
-    .then( function(txt) {
-        console.log(txt + "을 실행했구나" );
-        return hell();
-    })
-    .then( function( message) {
-        console.log( "여기는 " + message );
-    });
+async function exec() {
+    let name = await call('kim')
+    console.log( name + "반가워" );
+    let txt = await back(name);
+    console.log( txt + "을 실행했구나" );
+    let message = await hell(txt);
+    console.log("여기는" + message);
+}
+
+exec();
