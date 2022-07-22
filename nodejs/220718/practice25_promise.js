@@ -29,7 +29,7 @@ call('kim')
     })
     .then( function(txt) {
         console.log(txt + "을 실행했구나" );
-        return hell();
+        return hell(txt);
     })
     .then( function( message) {
         console.log( "여기는 " + message );
