@@ -10,7 +10,8 @@ app.use( '/abc', express.static( 'public' ) );
 }); */
 
 app.get('/', (req,res) => {
-    res.render( 'css', { a: 'hi' } );
+    var list = ['apple', 'banna'];
+    res.render( 'test', { list: list } );
 });
 
 app.listen(port, () => {
