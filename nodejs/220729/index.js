@@ -3,8 +3,18 @@ const app = express();
 const port = 8080;
 const bodyParser = require("body-parser");
 const multer = require("multer");
+const path = require("path");
 const upload = multer({
-    dest: "uploads/"
+    storage: multer.diskStorage({
+        destination(req, file, done){
+            done(null, 'uploads/');
+        },
+        filename(req, file, done) {
+            const ext = path.extname(file.originalname);
+            done(null, path.basename(file.originalname, ext) + Data.now() + ext );
+        },
+    }),
+    limits: {fileSize : 5*1024*1024 }
 });
 
 app.set("view engine", "ejs");
