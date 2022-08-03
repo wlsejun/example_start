@@ -25,10 +25,14 @@ app.get("/", function(req,res) {
 app.get("/register", function(req,res) {
     res.render("register");
 });
-
 app.post("/register", upload.single('userfile'), function(req,res) {
     res.render("result", { filename : req.file.filename });
-    
+});
+app.post("/upload", upload.single('userfile'), function(req,res) {
+    res.send("Upload");
+});
+app.post("/upload", upload.single('userfile'), function(req,res) {
+    res.send("Upload");
 });
 
 function test(req, res, next) {
