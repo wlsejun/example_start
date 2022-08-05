@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Index.ejs</title>
+    </head>
+
+    <body>
+        <div>
+            <form id="form_comment">
+              <fieldset>
+                <legend>방명록 등록</legend>
+                <div><input name="id" type="hidden" placeholder="사용자 이름"></div>
+                <div><input name="name" type="text" placeholder="사용자 이름"></div>
+                <div><input name="comment" type="text" placeholder="방명록"></div>
+                <div id="button-group">
+                    <button type="button" onclick="writeComment();">등록</button>
+                </div>
+              </fieldset>
+            </form>
+        </div>
+        <br>
+        <table id="visitr_list" border="1" cellspacing="0" cellpadding="5">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>작성자</th>
+                <th>방명록</th>
+                <th>수정</th>
+                <th>삭제</th>
+            </tr>
+            </thead>
+        </table>
+    </body>
+</html>

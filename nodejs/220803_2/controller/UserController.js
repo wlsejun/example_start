@@ -19,6 +19,25 @@ exports.login = (req,res) => {
 exports.post_login = async (req, res) => {
     var data = await User.get_user();
 
+    var infos = data.split("\n");
+    // for ( let i = 0; i < infos.length; i++ ){
+    //     // i = 0, infos[i] = "1//1//1//1";
+    //     var info = infos[i].split("//");
+    //     if ( info[0] == req.body.id && info[i] == req.body.pw ){
+    //         res.send("성공");
+    //         return false;
+    //     }
+    // }
+
+    var flag = false;
+    for ( let i = 0; i < infos.length; i++ ){
+        var info = info[i].split("//");
+        if ( info[0] == req.body.id && info[1] == req.body.pw ) flag = true;
+    }
+
+    if( flag ) res.send("성공");
+    else res.send("실패");
+
     var info = data.split("//");
 
     if ( info[0] != req.body.id ){
